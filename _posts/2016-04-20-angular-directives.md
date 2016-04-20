@@ -8,7 +8,7 @@ tags:
 - Post
 ---
 
-<h2>1 - Definição</h2>
+<h2>1 - Introdução</h2>
 
 <p>Por meio de diretivas é possível extender o comportamento de atributos HTML.</p>
 
@@ -44,3 +44,23 @@ tags:
 </ul>
 
 <p>Valores podem ser combinados: <code>restrict: 'AE'</code></p>
+
+<h3>1.2 - replace</h3>
+
+<ul>
+  <li><code>true</code>: Indica que o elemento em que a diretiva foi declarada será substituido pelo template da diretiva.</li>
+  <li><code>false</code>: Indica que o template da diretiva será anexado ao elemento em que a diretiva foi declarada.</li>
+</ul>
+
+<h3>1.3 - scope</h3>
+
+<ul>
+  <li><code>true</code>: Não é criado um novo escopo. A diretiva herda o escopo de acordo com a hierarquia DOM. <em>*Este é o valor padrão em caso de omissão.</em></li>
+  <li><code>false</code>: Será criado um novo escopo, mas herda atributos do escopo pai, podendo sobreescrevê-los.</li>
+  <li><code>Object</code>: Escopo isolado e independente.</li>
+</ul>
+
+<h2>2 - Definição</h2>
+
+<p>A função de compilação <code>compile</code> não tem acesso ao escopo. Esta função é executada antes da função de linkagem <code>link</code>.</p>
+
