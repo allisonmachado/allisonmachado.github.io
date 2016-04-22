@@ -220,3 +220,46 @@ tags:
     });
   </code>
 </pre>
+
+<h3 id="3.5-utilizando-binding-de-forma-simples">3.5 - Utilizando binding de maneira simplificada</h3>
+
+<pre>
+  <code>
+    &lt;!doctype html&gt;
+    &lt;html ng-app=&quot;myApp&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body ng-controller=&quot;myController&quot;&gt;
+        &lt;div&gt;
+          &lt;greet bind=&quot;allison&quot;&gt;&lt;/greet&gt;
+          &lt;greet bind=&quot;alessandra&quot;&gt;&lt;/greet&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+          angular.module('myApp', [])
+          .directive('greet', function() {
+            return {
+              scope: true,
+              restrict: 'EA',
+              replace: true,
+              template: function (element, attrs) {
+                var template =  
+                '&lt;div&gt;' + 
+                  '&lt;h2&gt;Cumprimentar:&lt;/h2&gt;' +
+                  '&lt;input type=&quot;text&quot; ng-model=&quot;person.'+ attrs.bind +'.name&quot;&gt;&lt;br/&gt;' + 
+                  '&lt;h2&gt;Hello &#123;&#123; person.'+ attrs.bind +'.name &#125;&#125;!&lt;/h2&gt;' + 
+                '&lt;/div&gt;';
+
+                return template;
+              }
+            };
+          })
+          .controller('myController', ['$scope', function($scope){
+            $scope.person = {};
+          }]);
+        &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  </code>
+</pre>
