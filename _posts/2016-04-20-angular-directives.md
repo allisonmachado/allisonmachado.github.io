@@ -8,6 +8,27 @@ tags:
 - Post
 ---
 
+<h2 id="Conteúdo">Conteúdo</h2>
+
+<ol>
+  <li><a href="{{ baseurl }}#1-introducao">Introdução</a></li>
+    <ol>
+      <li><a href="{{ baseurl }}#1.1-restrict">restrict</a></li>
+      <li><a href="{{ baseurl }}#1.2-replace">replace</a></li>
+      <li><a href="{{ baseurl }}#1.3-scope">scope</a></li>
+    </ol>
+  <li><a href="{{ baseurl }}#2-compilacao-vs-linkagem">Compilação vs Linkagem</a></li>
+  <li><a href="{{ baseurl }}#3-utilidades-basicas">Utilidades Básicas</a></li>
+    <ol>
+      <li><a href="{{ baseurl }}#3.1-parametros">Parametros</a></li>
+      <li><a href="{{ baseurl }}#3.2-observar-escopo">Observar escopo</a></li>
+      <li><a href="{{ baseurl }}#3.3-escutar-eventos">Ecutar eventos</a></li>
+      <li><a href="{{ baseurl }}#3.4-acessar-parametros-em-eventos">Aessar parametros em eventos</a></li>
+      <li><a href="{{ baseurl }}#3.5-utilizando-binding-de-forma-simples">Uilizando binding de forma simples</a></li>
+      <li><a href="{{ baseurl }}#3.6-capturar-conteudo-da-diretiva">Capturar conteudo da diretiva</a></li>
+    </ol>
+</ol>
+
 <h2 id="1-introducao">1 - Introdução</h2>
 
 <p>Por meio de diretivas é possível extender o comportamento de atributos HTML.</p>
@@ -70,7 +91,7 @@ tags:
 
 <p>A função de linkagem tem acesso ao escopo e é executada de forma individual para cada elemento.</p>
 
-<h2 id="3-possibilidades">3 - Possibilidades</h2>
+<h2 id="3-utilidades-basicas">3 - Utilidades Básicas</h2>
 
 <h3 id="3.1-parametros">3.1 - Parâmetros</h3>
 É possível enviar parâmetros para as diretivas e acessá-los em suas funções:
@@ -262,4 +283,43 @@ tags:
       &lt;/body&gt;
     &lt;/html&gt;
   </code>
+</pre>
+
+<h3 id="3.6-capturar-conteudo-da-diretiva">3.6 - Capturar conteúdo da diretiva</h3>
+
+<p>Para recuperar o conteúdo presente dentro do elemento de sua diretiva, use <code>transclude</code>:</p>
+
+<pre>
+  <code>&lt;!doctype html&gt;
+&lt;html ng-app=&quot;myApp&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;greet name=&quot;Allison&quot;&gt;&lt;em&gt;You are wellcome!&lt;/em&gt;&lt;/greet&gt;
+      &lt;greet name=&quot;Alessandra&quot;&gt;&lt;strong&gt;How are you?&lt;/strong&gt;&lt;/greet&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      angular.module('myApp', [])
+      .directive('greet', function() {
+        return {
+          transclude: true,
+          restrict: 'EA',
+          replace: true,
+          template: function (element, attrs) {
+            var template =  
+            '&lt;div&gt;' + 
+              '&lt;span&gt;Hello '+ attrs.name +', &lt;/span&gt;' +
+              '&lt;span ng-transclude&gt;&lt;/span&gt;' +
+            '&lt;/div&gt;';
+
+            return template;
+          }
+        };
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
 </pre>
