@@ -2,10 +2,9 @@
 layout: post
 title:  Angular JS - Diretivas
 tags:
-- News
-- Tags
-- Blog
-- Post
+- Angular
+- Javascript
+- Front-end
 ---
 
 <h2 id="Conteúdo">Conteúdo</h2>
