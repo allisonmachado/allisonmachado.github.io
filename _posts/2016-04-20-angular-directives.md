@@ -72,22 +72,86 @@ tags:
 
 <h2 id="3-possibilidades">3 - Possibilidades</h2>
 
-<h3 id="3.1-observar-escopo">3.1 - Observar escopo</h3>
+<h3 id="3.1-parametros">3.1 - Parâmetros</h3>
+É possível enviar parâmetros para as diretivas e acessá-los em suas funções:
+<pre>
+  <code>   
+    &lt;!doctype html&gt;
+    &lt;html ng-app=&quot;myApp&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div&gt;
+          &lt;greet name=&quot;Allison&quot;&gt;&lt;/greet&gt;
+          &lt;greet name=&quot;Alessandra&quot;&gt;&lt;/greet&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+          angular.module('myApp', [])
+          .directive('greet', function() {
+            return {
+              scope: true,
+              restrict: 'EA',
+              template: function (element, attrs) {
+                return '&lt;h1&gt;Hello '+ attrs.name +'!&lt;/h1&gt;';
+              },
+              replace: true
+            };
+          });
+        &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  </code>
+</pre>
+
+
+<h3 id="3.2-observar-escopo">3.2 - Observar escopo</h3>
 <p>Em uma diretiva, para atualizar um elemento de acordo com a alteração de uma variável do escopo, utiliza-se a função de linkagem (<code>watch</code>):</p>
 
 <pre>
   <code>
-    $scope.$watch('name', function(name) {
-      iElement.text('Hello ' + name + '!');
-    });
+    &lt;!doctype html&gt;
+    &lt;html ng-app=&quot;myApp&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body ng-controller=&quot;myController&quot;&gt;
+        &lt;div&gt;
+          &lt;label&gt;Nome:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; ng-model=&quot;person.name&quot;&gt;&lt;br/&gt;
+          &lt;greet name=&quot;Allison&quot;&gt;&lt;/greet&gt;
+          &lt;greet name=&quot;Alessandra&quot;&gt;&lt;/greet&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+          angular.module('myApp', [])
+          .directive('greet', function() {
+            return {
+              scope: true,
+              restrict: 'EA',
+              replace: true,
+              template: function (element, attrs) {
+                return '&lt;h1&gt;Hello '+ attrs.name +'!&lt;/h1&gt;';
+              },
+              link: function (scope, element, attrs) {
+                scope.$watch('person.name', function(name) {
+                  if (name) 
+                    element.text('Hello ' + name + '!');
+                });
+              }
+            };
+          })
+          .controller('myController', ['$scope', function($scope){
+            $scope.person = { name: null };
+          }]);
+        &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
   </code>
 </pre>
 
 <p></p>
-
-<h3 id="3.2-parametros-para-linkagem">3.2 - Parâmetros para função de linkagem</h3>
-
-<p>É possível passar parâmetros para a função de linkagem por meio de atributos e acessá-los por meio de <code>attrs</code></p>
 
 <h3 id="3.3-escutar-eventos">3.3 - Escutar eventos</h3>
 
@@ -95,21 +159,51 @@ tags:
 
 <pre>
   <code>
-    iElement.bind('click', function() {
-      $scope.name = 'abc';
-      $scope.apply(); // Propagar mudança de escopo que ocorre dentro da diretiva
-    })
-  </code>
-</pre>
 
-<p>Para capturar exceções lançadas em <code>apply()</code>:</p>
-<pre>
-  <code>
-    iElement.bind('click', function() {
-      $scope.apply(function() {
-        $scope.name = 'abc';
-      });
-    })
+    &lt;!doctype html&gt;
+    &lt;html ng-app=&quot;myApp&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body ng-controller=&quot;myController&quot;&gt;
+        &lt;div&gt;
+          &lt;label&gt;Nome:&lt;/label&gt;
+          &lt;input type=&quot;text&quot; ng-model=&quot;person.name&quot;&gt;&lt;br/&gt;
+          &lt;greet name=&quot;Allison&quot;&gt;&lt;/greet&gt;
+          &lt;greet name=&quot;Alessandra&quot;&gt;&lt;/greet&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+          angular.module('myApp', [])
+          .directive('greet', function() {
+            return {
+              scope: true,
+              restrict: 'EA',
+              replace: true,
+              template: function (element, attrs) {
+                return '&lt;h1&gt;Hello '+ attrs.name +'!&lt;/h1&gt;';
+              },
+              link: function (scope, element, attrs) {
+                scope.$watch('person.name', function(name) {
+                  if (name) 
+                    element.text('Hello ' + name + '!');
+                });
+
+                element.bind('click', function() {
+                  scope.$apply(function() {
+                    scope.person.name = 'Mouse';
+                  });
+                })
+              }
+            };
+          })
+          .controller('myController', ['$scope', function($scope){
+            $scope.person = { name: null };
+          }]);
+        &lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+
   </code>
 </pre>
 
@@ -119,16 +213,10 @@ tags:
 
 <pre>
   <code>
-    myApp.directive('demoGreet', function($parse) {
-      return {
-        link: function linkFn(scope, iElement, attrs {
-          iElement.bind('click', function() {
-            $scope.apply(function() {
-              $parse(attrs.demoGreet).assign(scope, 'abc');
-            });
-          })      
-        }
-      };
+    element.bind('click', function() {
+      scope.$apply(function() {
+        $parse(attrs.paramName).assign(scope.person.name, 'newName');
+      });
     });
   </code>
 </pre>
