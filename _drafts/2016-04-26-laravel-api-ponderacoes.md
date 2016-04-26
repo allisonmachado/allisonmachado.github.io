@@ -52,3 +52,56 @@ tags:
 </pre>
 
 <p>No exemplo acima, os códigos <code>200</code> e <code>404</code> são atribuídos de acordo com o resultado do processamento da requisição.</p>
+
+<h3 id="1.3-Transformando-a-resposta">1.3 - Transformando a resposta</h3>
+
+<p>Para disassociar a estrutura do banco da resposta enviada aos usuários, é necessário tratar o resultado das consultas realizadas. Considere as seguintes funções:</p>
+
+<pre>
+  <code>
+    ...
+    private function transform($post)
+    {
+      return [
+        'title' => $post['title'],
+        'body'  => $post['body'],
+        'published' => (boolean) $post['already_published']
+      ];
+    }
+    ...
+    private function transformCollection($posts)
+    {
+      return array_map([$this, 'transform'], $posts->toArray());
+    }
+    ...
+  </code>
+</pre>
+
+<p>Estas funções tratam os dados retornados do banco, filtrando e transformando colunas e valores para uma API bem definida. Portanto, antes de enviar os resultados ao cliente, aplique estas funções:</p>
+
+<pre>
+  <code>
+    ...
+    public function index() {
+      $posts = Post::all();
+      return Response::json([
+        'data' => $this->transformCollection($posts)
+      ], 200);
+    }
+    ...
+    public function show($id) {
+      $post = Post::find($id);
+
+      if (!$post) {
+        return Response::json([
+          'error' => ['message' => 'Post does not exist']
+        ], 404);
+      }
+
+      return Response::json([
+        'data' => $this->transform($post->toArray());
+      ], 200);
+    }
+    ...
+  </code>
+</pre>
