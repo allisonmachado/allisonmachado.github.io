@@ -84,9 +84,9 @@ tags:
 
 <h2 id="2-compilacao-vs-linkagem">2 - Compilação vs Linkagem</h2>
 
-<p>A função de compilação <code>compile</code> não tem acesso ao escopo. Esta função é executada antes da função de linkagem <code>link</code>.</p> 
+<p>A função de compilação <code>compile</code> não tem acesso ao escopo. Esta função é executada apenas uma vez, e é executada antes da função de linkagem <code>link</code>.</p> 
 
-<p>O objetivo da função de compilação é modificar aquilo que é comum a todos os elementos definidos por meio da diretiva. Por exemplo, modificar parte do template que é comum a todos os elementos.</p>
+<p>O objetivo da função de compilação é definir aquilo que é comum a todos os elementos associados à diretiva. Por exemplo, modificar parte do template que é comum a todos os elementos.</p>
 
 <p>A função de linkagem tem acesso ao escopo e é executada de forma individual para cada elemento.</p>
 

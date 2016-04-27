@@ -49,21 +49,24 @@ tags:
   <li>O escopo é a ligação entro o controller e a view;</li>
   <li>O escopo não é o model, mas contém referência para os models;</li>
   <li>Nos <u>templates</u> o <strong>escopo</strong> é para <em>leitura</em>, e nos <u>controllers</u> para <em>escrita</em>;</li>
-  <li>Controllers e diretivas possuem ponteiros para o escopo, não possuem ligação entre si;</li>
+  <li>Controllers e diretivas possuem ponteiros para o escopo, não possuem ligação entre si.</li>
+</ul>
+
+<h3 id="2.5-Directives">2.5 - Directives (diretivas)</h3>
+
+<ul>
+  <li>Diretivas são reponsáveis por extender o comportamento de elementos HTML;</li>
+  <li>Diretivas são reponsáveis por manipular o DOM;</li>
+  <li>Prefira <u>definir</u> diretivas através <strong>tags</strong> e <strong>atributos</strong> em vez de <em>comentários</em> ou <em>classes</em>;</li>
+  <li>Prefira declarar diretivas usando um <strong>objeto de definição</strong> em vez de uma <u>função de retorno</u>;</li>
+  <li>Para evitar conflitos de nomes, definas suas próprias diretivas usando prefixos;</li>
+  <li>Use um elemento quando for criar uma linguagem específica de domínio para as partes do seu sistema;</li> 
+  <li>Use um atributo quando você está decorando um elemento existente com novas funcionalidades;</li>
+  <li>Use a opção de escopo para criar escopos isoladas, criando diretivas reutilizáveis;</li>
 </ul>
 
 <h3 id="2.4-Modules">2.4 - Modules (módulos)</h3>
 
 <ul>
   <li>Use módulos como um grupamento de código reutilizável - controllers, services, diretivas e etc;</li>
-  <li>Geralmente um módulo por aplicação;</li>
-  <li>Caso tenha multiplos módulos por aplicação, agrupe-os por funcionalidade e não por tipo de estrutura (e.g. criar um módulo para controllers, outro para services e etc).</li>
 </ul>
-
-
-<h3 id="2.5-Directives">2.5 - Directives (diretivas)</h3>
-
-<ul>
-  <li>Diretivas são reponsáveis por manipular o DOM e extender HTML;</li>
-</ul>
-
