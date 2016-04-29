@@ -133,3 +133,59 @@ tags:
     $allison->read(new KindleAdapter(new Kindle()));
   </code>
 </pre>
+
+<h3 id="3-Template-Method">3 - Template Method</h3>
+
+<pre>
+  <code>
+    abstract class Html
+    {
+        private $title;
+
+        public function __construct($title)
+        {
+            $this-&gt;title = $title;
+        }
+
+        public function build()
+        {
+            return '&lt;!DOCTYPE html&gt;'
+                . '&lt;html&gt;'
+                    . $this-&gt;makeHeader()
+                    . $this-&gt;makeBody()
+                . '&lt;/html&gt;';
+        }
+
+        private function makeHeader()
+        {
+            return '&lt;head&gt;'
+                    . '&lt;title&gt;'. $this-&gt;title . '&lt;/title&gt;'
+                 . '&lt;/head&gt;';
+        }
+
+        protected abstract function makeBody();
+    }
+
+    class HelloHtml extends Html
+    {
+        protected function makeBody()
+        {
+            return '&lt;body&gt;&lt;/body&gt;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;/body&gt;';
+        }
+    }
+
+    class NotFoundHtml extends Html
+    {
+        protected function makeBody()
+        {
+            return '&lt;body&gt;&lt;h1&gt;404 - Page not found&lt;/h1&gt;&lt;/body&gt;';
+        }
+    }
+
+    $response = new HelloHtml('Hello');
+    echo $response-&gt;build();
+
+    $response = new NotFoundHtml('Error');
+    echo $response-&gt;build();
+  </code>
+</pre>
