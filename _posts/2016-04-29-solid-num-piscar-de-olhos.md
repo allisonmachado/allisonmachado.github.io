@@ -2,9 +2,8 @@
 layout: post
 title:  SOLID num piscar de olhos
 tags:
-- API
 - PHP
-- Laravel
+- Padrões
 ---
 
 <h2 id="1-Single Responsability">1 - Single Responsability</h2>
