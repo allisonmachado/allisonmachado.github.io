@@ -234,3 +234,83 @@ tags:
         $app->run();
     </code>
 </pre>
+
+<h3 id="5-Chain-of-Responsibility">5 Chain of Responsibility</h3>
+
+<pre>
+    <code>
+        class Car
+        {
+            public $brakeIsFine = true;
+            public $tireIsFine  = true;
+            public $wiperIsFine = true;
+        }
+
+        abstract class Checker
+        {
+            private $successor;
+
+            public abstract function check($item);
+
+            public function setSuccessor(Checker $successor)
+            {
+                $this->successor = $successor;
+            }
+
+            public function next($item)
+            {
+                if ($this->successor) {
+                    $this->successor->run($item);
+                }
+            }
+
+            public function run($item)
+            {
+                $this->check($item);
+                $this->next($item);
+            }
+        }
+
+        class BrakeChecker extends Checker
+        {
+            public function check($car)
+            {
+                if(!$car->brakeIsFine) {
+                    throw new Exception('Brake in poor condition, Abort!');
+                }
+            }
+        }
+
+        class TireChecker extends Checker
+        {
+            public function check($car)
+            {
+                if(!$car->tireIsFine) {
+                    throw new Exception('Tire in poor condition, Abort!');
+                }
+            }
+        }
+
+        class WiperChecker extends Checker
+        {
+            public function check($car)
+            {
+                if(!$car->wiperIsFine) {
+                    throw new Exception('Windshield wiper in poor condition, Abort!');
+                }
+            }
+        }
+
+        $car = new Car();
+        $car->wiperIsFine = false;
+
+        $checker = new BrakeChecker();
+        $tireChecker = new TireChecker();
+        $wiperChecker = new WiperChecker();
+
+        $tireChecker->setSuccessor($wiperChecker);
+        $checker->setSuccessor($tireChecker);
+
+        $checker->run($car);
+    </code>
+</pre>
