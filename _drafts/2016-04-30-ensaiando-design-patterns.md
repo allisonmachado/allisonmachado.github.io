@@ -314,3 +314,70 @@ tags:
         $checker->run($car);
     </code>
 </pre>
+
+<h3 id="6-Observers">6 - Observers</h3>
+
+<pre>
+    <code>
+        interface Subject
+        {
+            public function attach(Observer $observer);
+            public function detach($index);
+            public function notify();
+        }
+
+        interface Observer
+        {
+            public function handle();
+        }
+
+        class Login implements Subject
+        {
+            private $observers = [];
+
+            public function attach(Observer $observer)
+            {
+                $this->observers[] = $observer;
+
+                return $this;
+            }
+
+            public function detach($index)
+            {
+                unset($this->observers[$index]);
+            }
+
+            public function notify()
+            {
+                foreach ($this->observers as $observer) {
+                    $observer->handle();
+                }
+            }
+
+            public function fire()
+            {
+                // Perform login
+                $this->notify();
+            }
+        }
+
+        class EmailNotifier implements Observer
+        {
+            public function handle()
+            {
+                echo 'Fire off an email ';
+            }
+        }
+
+        class Task implements Observer
+        {
+            public function handle()
+            {
+                echo 'Run some task ';
+            }
+        }
+
+        $login = (new Login())->attach(new EmailNotifier())->attach(new Task());
+        $login->fire();
+    </code>
+</pre>
