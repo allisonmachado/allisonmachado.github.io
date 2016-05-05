@@ -189,3 +189,48 @@ tags:
     echo $response-&gt;build();
   </code>
 </pre>
+
+<h3 id="4-Strategy-Pattern">4 - Strategy Pattern</h3>
+
+<pre>
+    <code>
+        interface Logger
+        {
+            public function log($data);
+        }
+
+        class FileLogger implements Logger
+        {
+            public function log($data)
+            {
+                echo 'Loggin to file -> ' . $data;
+            }
+        }
+
+        class DatabaseLogger implements Logger
+        {
+            public function log($data)
+            {
+                echo 'Loggin to database -> ' . $data;
+            }
+        }
+
+        class App
+        {
+            private $logger;
+
+            public function __construct(Logger $logger)
+            {
+                $this->logger = $logger;
+            }
+
+            public function run()
+            {
+                $this->logger->log('Running app');
+            }
+        }
+
+        $app = new App(new FileLogger());
+        $app->run();
+    </code>
+</pre>
