@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Alarme Simples
+title:  Alarme Simples (Eletrônica)
 tags:
 - DIY
 - Eletrônica
