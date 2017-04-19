@@ -52,8 +52,8 @@ tags:
 <img src="{{ site.baseurl }}static/img/posts/alarme-simples/Alarme_04.jpg" class="img-responsive">
 
 <p>
-    Caso a porta/janela seja aberta, será aplicada tensão positiva na <i>base</i> do transistor que, por sua vêz, permite a
-    passagem de corrente ativando o relê. Quando o relê troca suas conexões internas, ele fornece tensão a um circuito responsável
+    Caso a porta/janela seja aberta, será aplicada tensão positiva na <i>base</i> do transistor que, por sua vez, permite a
+    passagem de corrente ativando o relê. Quando o relê troca suas conexões internas, fornece tensão a um circuito responsável
     por ativar uma sirene ou auto-falante, soando o alarme. Observe que ao mesmo tempo, o relê perde a conexão com a tensão
     negativa (capaz de fornecer baixa tensão à <i>base</i> do transistor). Portanto, depois que o alarme soar, já não é
     sufisciente fechar a janela/porta para desativar o alarme, pois não será possível abaixar a tensão na base do transistor:
@@ -68,17 +68,17 @@ tags:
 <h2 id="Circuito-oscilador">Circuito Oscilador</h2>
 
 <p>
-    Para soar o alarme foi utilizado um Alto-falante de duas polegadas e 6Ohms de impedância. Não adianta aplicar 9V de
-    corrente contínua direto no alto-falande, é necessário oscilar a tensão para que, no nosso caso, exista um ruído de alarme.
+    Para soar o alarme foi utilizado um Alto-falante de duas polegadas e 6Ohms de impedância. Não basta aplicar 9V de
+    corrente contínua direto no alto-falande, é necessário oscilar a tensão para que, no nosso caso, o alto-falante produza um ruído de alarme.
     O <i>circuito oscilador</i> utilizado foi o seguinte:
 </p>
 
 <img src="{{ site.baseurl }}static/img/posts/alarme-simples/Oscilador_01.jpg" class="img-responsive">
 
 <p>
-    Infelizmente não anotei os valores dos resistores e capacitores utilizados. O processo para encontrá-los foi uma verdadeira
-    descoberta, conectei os componentes em uma protoboard, e testei valores diferentes de resistores e capacitors. Utilizei
-    valores pequenos de capacitores para obter uma frequência relativamente alta.
+    Infelizmente não anotei os valores dos resistores e capacitores utilizados. Como processo para encontrá-los foi uma verdadeira
+    descoberta (conectei os componentes em uma protoboard, e testei valores diferentes de resistores e capacitors), acabei 
+    soldando o circuito e esquecendo fazer as anotações.
 </p>
 
 <h2 id="Imagens-da-montagem">Imagens da montagem</h2>
@@ -119,6 +119,6 @@ tags:
 <img src="{{ site.baseurl }}static/img/posts/alarme-simples/Sensor_01.png" class="img-responsive">
 
 <p>
-    Nos esquemas utilizados acima, para a explicação do funcionamento do circuito, utilizei o simbolo de um <i>switch</i>
+    Nos esquemas apresentados acima, com o objetivo de simplificar a explicação do funcionamento do circuito, utilizei o simbolo de um <i>switch</i>
     para representar este sensor aberto ou fechado.
 </p>
