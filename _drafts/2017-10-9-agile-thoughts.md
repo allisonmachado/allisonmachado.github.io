@@ -9,7 +9,7 @@ tags:
 - Desenvolvimento de Software
 ---
 
-<h2 id="Descrição">Scrum</h2>
+<h2 id="Scrum">Scrum é Ágil</h2>
 
 <p>
     A maneira mais fácil de desenvolver software de alto valor é implementar primeiro os requisitos de maior prioridade e maior interesse do cliente. Trabalhar primeiramente nos ítens mais críticos e importantes do sistema está diretamente ralacionada à eficácia da equipe. Eficiência sem eficácia não traz satisfação ao cliente, não adianta ser muito produtivo desenvolvendo várias funcionalidades que, por fim, serão pouco utilizadas ou até mesmo abandonadas pelos usuários finais.
@@ -33,6 +33,30 @@ tags:
     </ul>
 </p>
 
+<h2 id="EquipeScrum">Equipe Scrum</h2>
+
 <p>
-    Scrum não é uma metodologia de desenvolvimento, é uma maneira de organizar seu trabalho para aplicar a metodologia ágil de desenvolvimento de software.
+    Scrum não é uma metodologia de desenvolvimento, é uma maneira de organizar seu trabalho para aplicar a metodologia ágil de desenvolvimento de software. A organização estabelece como deve ser formada uma equipe Scrum e quais os papéis exercidos nesta modalidade. 
+    Uma equipe é formada por um "Product Owner", um "Scrum Master" e um "Time de Desenvolvimento". E se fosse necessário apontar, de maneira resumida, três responsabilidades fundamentais de cada função, poderíamos listá-las assim:
+
+    "Product Owner"
+    <ul>
+        <li>Estabelecer a direção e a visão da equipe</li>
+        <li>Priorizar requisitos e seus lançamentos</li>
+        <li>Maximizar o lucro do projeto</li>
+    </ul>
+
+    "Time de Desenvolvimento"
+    <ul>
+        <li>Enunciar o nível de dificuldade de cada tarefa</li>
+        <li>Se organizar e planejar como os requisitos serão desenvolvidos</li>
+        <li>Implementar os requisitos</li>
+    </ul>
+
+    "Product Owner"
+    <ul>
+        <li>Elaborar um ambiente de sucesso</li>
+        <li>Fazer cumprir as regras do Scrum</li>
+        <li>Facilitar a interação de toda a equipe</li>
+    </ul>
 </p>
