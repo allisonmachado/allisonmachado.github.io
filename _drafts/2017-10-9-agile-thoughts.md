@@ -9,6 +9,28 @@ tags:
 - Desenvolvimento de Software
 ---
 
+<h2 id="OQueEAgil">O que é Ágil?</h2>
+
+<p>
+    Desenvolvimento Ágil não é um estado binário sobre o qual alguém poderia afirmar: "Somos uma equipe Agil". Desenvolvimento Ágil está mais para uma grandeza escalar, que pode ser medida e seu valor é alto quando está bem alinhado aos valores do <a href="http://agilemanifesto.org/">Manifesto para Desenvolvimento Ágil de Software</a> e aos <a href="http://agilemanifesto.org/iso/ptbr/principles.html">Princípios por trás do Manifesto Ágil</a>.
+
+    Resumidamente, o manifesto acredita existir mais valor em "Indivíduos interagindo para produzir software em funcionamento aliados à colaboração com o cliente e respondendo bem à mudanças" do que "Processos e ferramentas produzindo uma documentação abrangente para aderir à negociação de contratos seguindo planos estritos".
+
+    Juntamente com a definição do que gera mais valor, foram definidos <a href="http://agilemanifesto.org/iso/ptbr/principles.html"">12 princípios</a> para nortear equipes de desenvolvimento, ajudando-as a identificar o quão Ágil é o seu processo.
+
+    Pode ser difícil lembrar de todos os princípios e aplicá-los sempre, apesar disto, se nada além do princípio número 1 já for bem aplicado, é bem provavel que o nível de satisfação de seu cliente seja bom. Portanto que a sua prioridade seja <i>satisfazer o cliente através da entrega contínua e adiantada de software com alto valor agregado</i>
+
+    Mesmo que todos tenham sido ensinadaso que mudanças são ruins, o processo Ágil tira vantagem das mudanças visando vantagem competitiva para o cliente. A mudança nos mostra que conheçemos mais o produto, nos mostra que estamos mais informados a respeito da necessidade do cliente. Portanto, mudanças nos requisitos ao mesmo tempo que são inevitáveis são bem-vindas. Um dos objetivos de se fazer ciclos completos e num curto período de tempo (Sprints) é que, em cada iteração, o software sempre estará em funcionamento, capaz de ser disponibilizado para utilização. Portanto, mudanças nas próximas iterações são tratadas outras funcionalidades, sendo tratadas com a mesma seriedade e flexibilidade de outras tarefas já listadas no Backlog.
+
+    Entregar software funcionando com frequência significa ser competitivo, e o seu nível de competitividade aumenta quando o tempo entre uma entrega e a outra diminui. Se as entregas são baseadas em prioridade por valor, como já discutido, entregas significam valor, e quando mais rápida a entrega maior o lucro, pois o tempo total utilizado é menor.
+
+    Pessoas de negócio e desenvolvedores devem trabalhar diariamente em conjunto por todo o projeto, porque documentação extensa será substituida por indivíduos e interações. Eles devem trabalhar em conjunto para que as dúvidas do negócio sejam sanadas da maneira mais rápida possível, permitindo o desenvolvimento dos requisitos.
+
+    Construa projetos em torno de indivíduos motivados e para isto, confie neles para fazer o trabalho. Pessoas são sim motivadas pelo dinheiro. Entretanto, o propósito, o conhecimento e a autonomia são fatores chave, de peso e intimamente ligados à motivação humana. Confiando nos indivíduos e dando a eles o ambiente e o suporte necessário para realizar seu trabalho certamente elevará os níveis de satisfação de sua equipe.
+
+    Para uma boa comunicação entre indivíduos, é necessário ter uma boa dicção e ao mesmo tempo saber evidenciar tudo aquilo que se deseja transmitir. Ao mesmo tempo, é necessário ser um bom ouvinte e processar as informações recebidas com calma, cooperando na construção do conhecimento. Por essas e outras, o método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é através de conversa face a face. Qualquer outra forma de comunicação anexa intrínsecamente alguma barreira na comunicação.
+</p>
+
 <h2 id="Scrum">Scrum é Ágil</h2>
 
 <p>
@@ -33,7 +55,7 @@ tags:
     </ul>
 </p>
 
-<h2 id="EquipeScrum">Equipe Scrum</h2>
+<h2 id="EquipeScrum">Scrum exige organização</h2>
 
 <p>
     Scrum não é uma metodologia de desenvolvimento, é uma maneira de organizar seu trabalho para aplicar a metodologia ágil de desenvolvimento de software. A organização estabelece como deve ser formada uma equipe Scrum e quais os papéis exercidos nesta modalidade. 
@@ -59,4 +81,24 @@ tags:
         <li>Fazer cumprir as regras do Scrum</li>
         <li>Facilitar a interação de toda a equipe</li>
     </ul>
+</p>
+
+<h2 id="AJordadaAteOProduto">A Jordada até o produto</h2>
+
+<p>
+    É necessário ser veloz no desenvolvimento de software e ao mesmo tempo desenvolver aquilo que o cliente espera, assim, concebendo valor! Isto só pode ser realizado se existir uma direção bem clara do produto sendo desenvolvido - possibilitando o desenvolvimento dos requisitos que ofertam o maior valor - e, ao mesmo tempo, se manter um ciclo de revisão e feedbacks que alimentem e esclareçam e atualizam a direção do produto, para que a execução continue criando o melhor valor possível ao cliente.
+</p>
+
+<p>
+    É importante documentar a "Visão" do produto no início do projeto, para que o objetivo final esteja claro desde o primeiro ciclo de desenvolvimento. A partir da "Visão" documenta-se o "Roadmap" do produto, que é uma descrição abrangente das funcionalidades capazes de nos levar até a "Visão". Somente depois de estabelecido o "Roadmap" é possível estabelecer um "Plano de Entregas" com as aspirações do que se deseja entregar com prioridade ao mercado ou cliente. O "Plano de Entregas" mobiliza a equipe na direção da monetização e lucro. O dono e responsável por estes artefatos é o Product Owner.
+</p>
+
+<p>
+    Neste ponto, temos uma direção traçada, e já é possível executar, trabalhar nesta direção por meio dos "Planejamentos de Sprint". Então, a partir do "Plano de Entregas", o a equipe deve se esforçar para entregar nas próximas 2 ou 3 semanas e progredir na direção da "Visão"?
+    Separando um conjunto de atividades do "Backlog" e quebrando-as em tarefas que serão executadas. A "Execução da Sprint" é a próxima etapa, e diariamente deve-se zelar para que a execução mova na direção dos ítens mais importantes a serem concluídos. 
+</p>
+
+<p>
+    Por fim, para garantir a melhora contínua do produto reliza-se a "Sprint Review" onde se busca o feedback dos Stakeholders e clientes, alimentando e atualizando o "Backlog".
+    Para que a equipe também caminhe no sentido da melhora contínua, é necessário que em equipe se reuna e faça a "Retrospectiva da Sprint", reforçando pontos positivos e tentando corrigir falhas na execução.
 </p>
