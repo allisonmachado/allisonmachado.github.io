@@ -26,9 +26,15 @@ tags:
 
     Pessoas de negócio e desenvolvedores devem trabalhar diariamente em conjunto por todo o projeto, porque documentação extensa será substituida por indivíduos e interações. Eles devem trabalhar em conjunto para que as dúvidas do negócio sejam sanadas da maneira mais rápida possível, permitindo o desenvolvimento dos requisitos.
 
-    Construa projetos em torno de indivíduos motivados e para isto, confie neles para fazer o trabalho. Pessoas são sim motivadas pelo dinheiro. Entretanto, o propósito, o conhecimento e a autonomia são fatores chave, de peso e intimamente ligados à motivação humana. Confiando nos indivíduos e dando a eles o ambiente e o suporte necessário para realizar seu trabalho certamente elevará os níveis de satisfação de sua equipe.
+    Construa projetos em torno de indivíduos motivados e para isto, confie neles para fazer o trabalho. Isto está diretamente relacionado ao penúltimo princípio do manifesto, que diz que As melhores arquiteturas, requisitos e designs emergem de equipes auto-organizáveis. Pessoas são sim motivadas pelo dinheiro. Entretanto, propósito, conhecimento e autonomia são fatores chave, de peso e intimamente ligados à motivação humana. Confiando nos indivíduos e dando a eles o ambiente e o suporte necessário para realizar seu trabalho, certamente elevará os níveis de satisfação de sua equipe, e ao mesmo tempo fará com que a equipe se sinta parte do projeto. Quando a equipe se sente parte do projeto, tendo visibilidade e crédito pelo que é desenvolvido, é muito mais provável que o produto tenho um alto nível de qualidade, pois as pessoas naturalmente se preocupam com a sua imagem pessoal, e desta forma o produto estará intimamente ligado com a imagem pessoal dos indivíduos da equipe de desenvolvimento.
 
     Para uma boa comunicação entre indivíduos, é necessário ter uma boa dicção e ao mesmo tempo saber evidenciar tudo aquilo que se deseja transmitir. Ao mesmo tempo, é necessário ser um bom ouvinte e processar as informações recebidas com calma, cooperando na construção do conhecimento. Por essas e outras, o método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é através de conversa face a face. Qualquer outra forma de comunicação anexa intrínsecamente alguma barreira na comunicação.
+
+    Documentação não pode ser considerada para medir progresso, documentação por si só não gera valor, não executa tarefas, não resolve problemas, não é possível fazer o "deploy" de um documento. Portanto, Software funcionando é a medida primária de progresso.
+
+    Ser capaz de manter um rítmo constante de produtividade significa promover um ambiente de desenvolvimento sustentável. Desta forma é possível manter o cliente com espectativas realísticas sobre o tempo de entrega do seu trabalho. É comum equipes de desenvolvimento se sacrificarem fazendo horas extra e trabalhando em finais de semana para cumprirem com uma data de entregas. A pior consequência desta prática é que o time de desenvolvimento entrega para o cliente uma falsa noção de produtividade, de forma que ele nunca mais irá esperar menos produtividade do que o que foi demonstrado nesta Sprint marcada por sacrifícios e excessos.
+
+
 </p>
 
 <h2 id="Scrum">Scrum é Ágil</h2>
@@ -42,7 +48,7 @@ tags:
 
     Portanto, mudanças devem ser consideradas como uma oportunidade de melhoria e isto é refletido num backlog que está em constante atualização. Esta é a única maneira de se manter vigente e capaz de concorrer com tecnologias que são disponibilizadas no mercado a cada dia, e ao mesmo tempo satisfazer novos anseios de seu cliente que, após interagir com seu produto, tem ideias de melhorias que farão seu produto agregar um grande valor.
 
-    Não significa que não exista "estabilidade" no Scrum pois a partir do momento em que existem requisitos priorizados para serem desenvolvidos em uma Sprint, eles serão elaborados, planejados, desenvolvidos, testados, integrados, documentados e aprovados sem distrações ou mudanças de escopo. E ao final da Sprint, a equipe melhora gradualmente seu produto coletando feedback do cliente e, paralelamente, também melhora gradualmente seu processo com a retrospectiva interna da Sprint, avaliando entre os membros da equipe o que foi positivo e negativo durante o desenvolvimento.
+    Não significa que não exista "estabilidade" no Scrum pois a partir do momento em que existem requisitos priorizados para serem desenvolvidos em uma Sprint, eles serão elaborados, planejados, desenvolvidos, testados, integrados, documentados e aprovados sem distrações ou mudanças de escopo. E ao final da Sprint, a equipe melhora gradualmente seu produto coletando feedback do cliente e, paralelamente, também melhora gradualmente seu processo com a retrospectiva interna da Sprint, avaliando entre os membros da equipe o que foi positivo e negativo durante o desenvolvimento, "a equipe reflete sobre como se tornar mais eficaz e então refina e ajusta seu comportamento adequadamente".
 </p>
 
 <p>
