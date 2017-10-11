@@ -92,11 +92,18 @@ tags:
 <h2 id="AJordadaAteOProduto">A Jordada até o produto</h2>
 
 <p>
-    É necessário ser veloz no desenvolvimento de software e ao mesmo tempo desenvolver aquilo que o cliente espera, assim, concebendo valor! Isto só pode ser realizado se existir uma direção bem clara do produto sendo desenvolvido - possibilitando o desenvolvimento dos requisitos que ofertam o maior valor - e, ao mesmo tempo, se manter um ciclo de revisão e feedbacks que alimentem e esclareçam e atualizam a direção do produto, para que a execução continue criando o melhor valor possível ao cliente.
+    É necessário ser veloz no desenvolvimento de software e ao mesmo tempo desenvolver aquilo que o cliente realmente espera, desta forma, concebendo valor! Isto só pode ser realizado se existir uma direção bem clara do produto sendo desenvolvido - possibilitando o desenvolvimento dos requisitos que ofertam o maior valor - e, ao mesmo tempo, se manter um ciclo de revisão e feedbacks que alimentem e esclareçam e atualizam a direção do produto, para que a execução continue criando o melhor valor possível ao cliente.
 </p>
 
 <p>
-    É importante documentar a "Visão" do produto no início do projeto, para que o objetivo final esteja claro desde o primeiro ciclo de desenvolvimento. A partir da "Visão" documenta-se o "Roadmap" do produto, que é uma descrição abrangente das funcionalidades capazes de nos levar até a "Visão". Somente depois de estabelecido o "Roadmap" é possível estabelecer um "Plano de Entregas" com as aspirações do que se deseja entregar com prioridade ao mercado ou cliente. O "Plano de Entregas" mobiliza a equipe na direção da monetização e lucro. O dono e responsável por estes artefatos é o Product Owner.
+    É importante documentar a "Visão" do produto no início do projeto, para que o objetivo final esteja claro desde o primeiro ciclo de desenvolvimento. Um documente de Visão deve ter simples e bem conciso de forma que o entendimento do protudo seja adquirido da maneira mais rápida possível. É importante que este documento estabeleça as 'fronteiras' ou limites do projeto, até que ponto o produto desenvolvido terá aplicação. Este documento é o farol norteador do projeto, que deve ser revisto para que não se perca os objetivos princiais, cuja carcteristica principal é a claridade e simplicidade na exposição de idéias.
+
+</p>
+<p>
+    A partir da "Visão" documenta-se o "Roadmap" do produto, que é uma descrição abrangente das funcionalidades capazes de nos levar até a "Visão". O Roadmap torna a sua Visão mais tangível, e ajuda a identificar afinidades, lacunas e dependências de requisitos. Também ajuda a identificar as habilidades necessárias na equipe que irá trabalhar e desenvolver o projeto. 
+</p>
+<p>
+    Somente depois de estabelecido o "Roadmap" é possível estabelecer um "Plano de Entregas" com as aspirações do que se deseja entregar com prioridade ao mercado ou cliente. O "Plano de Entregas" mobiliza a equipe na direção da monetização e lucro. O dono e responsável por estes artefatos é o Product Owner.
 </p>
 
 <p>
