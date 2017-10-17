@@ -119,5 +119,17 @@ tags:
 
 <p>
     Por fim, para garantir a melhora contínua do produto reliza-se a "Sprint Review" onde se busca o feedback dos Stakeholders e clientes, alimentando e atualizando o "Backlog".
-    Para que a equipe também caminhe no sentido da melhora contínua, é necessário que em equipe se reuna e faça a "Retrospectiva da Sprint", reforçando pontos positivos e tentando corrigir falhas na execução.
+    Para que a equipe também caminhe no sentido da melhora contínua, é necessário que em equipe se reuna e faça a "Retrospectiva da Sprint", reforçando pontos positivos e tentando corrigir falhas na execução. 
+</p>
+
+<h2 id="OdiaadianasSprints">O dia a dia nas Sprints</h2>
+
+<p>
+    A ideia de implementar as funcionalidades e requisitos dentro de um período estabelecido pela Sprint é simples. Entretanto, garantir a qualidade do software desenvolvido exige um alto grau de compromisso com testes, decumentação e revisão.
+</p>
+<p>
+    Quando se pensa em testes, pode-se ter a ideia simplista de que basta ter testes Unitários para garantir a qualidade do produto. Mas a rotiana diária de um desenvolvedor deve incluir testes Unitários, que são simples, testes de Integração e testes Funcionais, todos automatizados. Os testes de Integração objetivam encontrar problemas na integração interna dos componentes de um sistema, que podem muito bem funcionar corretamente num ambiente isolado e controlado, passando a falsa sensação de que não existem problemas. Já os testes Funcionais têm o objetivo de provar a corretude dos resultados obtidos, sob uma perspectiva do usuário, sob um diversificado conjunto de dados de entrada, avaliando extensivamente o comportamento externo do componente de software. Por fim, é desejavel que diariamente, o software seja submetido a testes de aceitação, buscando aprovação do usuário final, o mais apto a simular operações de rotina do sistema para ver se seu comportamento está de acordo com o solicitado. Após a aceitação, incluimos a "cereja do bolo" e submetemos o código fonte à análise estática para verificar sua qualidade. Analisadores estáticos podem investigar se em todos os arquivos foram adotadas as as boas práticas e apurar os padrões de escrita escolhidos pela equipe.
+</p>
+<p>
+
 </p>
