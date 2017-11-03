@@ -15,7 +15,7 @@ tags:
     Desenvolvimento Ágil não é um estado binário sobre o qual poderiam afirmar: "Somos uma equipe Agil". Desenvolvimento Ágil está mais para uma grandeza escalar, que pode ser medida e seu valor é alto quando está bem alinhado aos valores do <a href="http://agilemanifesto.org/">Manifesto para Desenvolvimento Ágil de Software</a> e aos <a href="http://agilemanifesto.org/iso/ptbr/principles.html">Princípios por trás do Manifesto Ágil</a>.
 </p>
 <p>
-    Resumidamente, o manifesto acredita existir mais valor em indivíduos interagindo para produzir software em funcionamento (em constatne colaboração com o cliente e respondendo bem à mudanças) do que seguir processos (e ferramentas ou produção de documentação abrangente para aderir rigorosamente à contratos) e planos rigorosos.
+    Resumidamente, o manifesto acredita existir mais valor em indivíduos interagindo para produzir software em funcionamento (em constante colaboração com o cliente e respondendo bem à mudanças) do que seguir processos (e ferramentas ou produção de documentação abrangente para aderir rigorosamente à contratos) e planos rigorosos.
 </p>
 <p>
     Juntamente com a definição do que gera mais valor, foram definidos <a href="http://agilemanifesto.org/iso/ptbr/principles.html">12 princípios</a> para nortear equipes de desenvolvimento, ajudando-as a identificar o quão Ágil é o seu processo.
@@ -55,7 +55,7 @@ tags:
 <h3 id="Ordem-e-progresso?">Ordem e progresso?</h3>
 
 <p>
-    Um erro comum entre metodologias 'não ágil' é contar vantagem e progresso no projeto mesmo que as únicas entregas efetuadas até o momento tenham sido arquivos de documentação. <a href="https://sourcemaking.com/antipatterns/cover-your-assets">Documentação, apenas, não pode ser considerada para medir progresso!</a> Documentação por si só não gera valor, não executa tarefas, não resolve problemas e não é possível fazer o "deploy" de um documento! Portanto, <i>Software funcionando</i> é a medida primária de progresso em equipes ágeis.
+    Um erro comum entre metodologias 'não ágil' é contar vantagem e progresso no projeto mesmo que as únicas entregas efetuadas até o momento tenham sido arquivos de documentação. <a href="https://sourcemaking.com/antipatterns/cover-your-assets">Documentação, apenas, não pode ser considerada para medir progresso!</a> Documentação por si só não gera valor, não executa tarefas, não resolve problemas e não é possível fazer o "deploy" de um documento! Portanto, <a href="http://www.agile-process.org/working.html">Software funcionando</a> é a medida primária de progresso em equipes ágeis.
 </p>
 <p>
     Por fim, ser capaz de manter um rítmo constante de produtividade significa promover um ambiente de desenvolvimento sustentável. Desta forma é possível manter o cliente com espectativas realísticas sobre o tempo de entrega do seu trabalho. É comum equipes de desenvolvimento se sacrificarem fazendo horas extra e trabalharem em finais de semana para cumprirem com datas de entrega. A pior consequência desta prática é que o time de desenvolvimento entrega para o cliente uma falsa noção de produtividade e de tempo, de forma que o cliente nunca mais irá esperar menos produtividade do que o que foi demonstrado neste ciclo - marcado por sacrifícios e excessos. Portanto, ser ágil é ser realista, e ser responsável por organizar uma sequência de desenvolvimento sustentável.
