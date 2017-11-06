@@ -45,7 +45,7 @@ tags:
 <p>
     O próximo passo é ativar o circuito, invertendo o <i>switch de controle</i>, conectando-o no polo inferior. Nesta configuração,
     a tensão aplicada na <i>base</i> do transistor permanece baixa, próxima de 0VDC, pois recebe "voltagem negativa" por meio
-    da conexão com o relê. A tensão positvia do resistor <i>pullup</i> conectada à base do transistor é sobreposta pela tensão negativa
+    da conexão com o relê. A tensão positiva do resistor <i>pullup</i> conectada à base do transistor é sobreposta pela tensão negativa
     caso a porta/janela continue fechada:
 </p>
 
@@ -56,7 +56,7 @@ tags:
     passagem de corrente ativando o relê. Quando o relê troca suas conexões internas, fornece tensão a um circuito responsável
     por ativar uma sirene ou auto-falante, soando o alarme. Observe que ao mesmo tempo, o relê perde a conexão com a tensão
     negativa (capaz de fornecer baixa tensão à <i>base</i> do transistor). Portanto, depois que o alarme soar, já não é
-    sufisciente fechar a janela/porta para desativar o alarme, pois não será possível abaixar a tensão na base do transistor:
+    suficiente fechar a janela/porta para desativar o alarme, pois não será possível abaixar a tensão na base do transistor:
 </p>
 
 <img src="{{ site.baseurl }}static/img/posts/alarme-simples/Alarme_05.jpg" class="img-responsive">
@@ -69,7 +69,7 @@ tags:
 
 <p>
     Para soar o alarme foi utilizado um Alto-falante de duas polegadas e 6Ohms de impedância. Não basta aplicar 9V de
-    corrente contínua direto no alto-falande, é necessário oscilar a tensão para que, no nosso caso, o alto-falante produza um ruído de alarme.
+    corrente contínua direto no alto-falante, é necessário oscilar a tensão para que, no nosso caso, o alto-falante produza um ruído de alarme.
     O <i>circuito oscilador</i> utilizado foi o seguinte:
 </p>
 
