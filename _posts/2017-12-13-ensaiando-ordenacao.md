@@ -6,6 +6,48 @@ tags:
 - Algorithms
 ---
 
+<h2 id="1-SelectionSort">0 - Selection Sort</h2>
+
+<pre>
+  <code>
+    let numbers = [7,5,6,3,1,2,0,4];
+
+    let swap = (arr, i, j) => {
+        let tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    };
+
+    let selectionsort = (arr) => {
+      let index = 0;
+      
+      while(index < arr.length) {
+        let min = Infinity;
+        let minIndex = null;
+        for(let i = index; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+            minIndex = i;
+          }
+        }
+        if (!!minIndex) {
+          swap(arr, minIndex, index);
+        }
+        index++;
+      }
+    }
+
+    let sort = (arr) => {
+        selectionsort(arr);
+    };
+
+    console.log(numbers);
+    sort(numbers);
+    console.log(numbers);
+  </code>
+</pre>
+<h4 style="text-align-last: right;"> Performance: O(n<sup>2</sup>), Space : O(1) </h4>
+
 <h2 id="1-BubbleSort">1 - Bubble Sort</h2>
 
 <pre>
