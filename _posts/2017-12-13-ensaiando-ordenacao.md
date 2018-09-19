@@ -92,72 +92,53 @@ tags:
   <code>
     let numbers = [7,5,6,3,1,2,0,4];
 
-    let copy = (origin, destination, startIndex, endIndex) => {
-        for (let i = startIndex, destinationIndex = 0; 
-                 i <= endIndex; 
-                 i++, destinationIndex++) { destination[destinationIndex] = origin[i]; }
-    };
-
-    let merge = (first, second) => {
-        let tmp = new Array(first.length + second.length);
-        let i = 0;
-        let j = 0;
-        let track = 0;
-
-        while(i < first.length && j < second.length) {
-            if (first[i] < second[j]) {
-                tmp[track] = first[i];
-                i++;
-                track++;
-            }
-            else if (second[j] < first[i]) {
-                tmp[track] = second[j];
-                j++;
-                track++;
-            }
+    let merge = (main, helper, low, middle, high) => {
+        for (let i = low; i <= high; i++) {
+            helper[i] = main[i];
         }
 
-        if (i < first.length) {
-            while (i < first.length) {
-                tmp[track] = first[i];
-                i++;
-                track++;
+        let helperLeft = low;
+        let helperRight = middle + 1;
+        let current = low;
+
+        while(helperLeft <= middle && helperRight <= high) {
+            if(helper[helperLeft] < helper[helperRight]) {
+                main[current] = helper[helperLeft];
+                helperLeft++;
+            }
+            else {
+                main[current] = helper[helperRight];
+                helperRight++;  
+            }
+            current++;
+        }
+
+        if (helperLeft <= middle) {
+            while(helperLeft <= middle) {
+                main[current] = helper[helperLeft];
+                helperLeft++;
+                current++
             }
         }
-        else if (j < second.length) {
-            while (j < second.length) {
-                tmp[track] = second[j];
-                j++;
-                track++;
-            }
+    }
+
+    let mergesort = (arr, helper, low, high) => {
+        if (low < high) {
+            let middle = Math.round(((low + high) / 2) - 1);
+            mergesort(arr, helper, low, middle);
+            mergesort(arr, helper, middle + 1, high);
+            merge(arr, helper, low, middle, high);
         }
-
-        return tmp;
-    };
-
-    let mergesort = (arr) => {
-        if (arr.length == 1) return arr;
-
-        let midIndex = Math.round(arr.length / 2);
-        let firstHalf = new Array(midIndex - 1);
-        let secondHalf = new Array(arr.length - midIndex);
-
-        copy(arr, firstHalf, 0, midIndex - 1);
-        copy(arr, secondHalf, midIndex, arr.length - 1);
-
-        firstHalf = mergesort(firstHalf);
-        secondHalf = mergesort(secondHalf);
-
-        return merge(firstHalf, secondHalf);
-    };
+    }
 
     let sort = (arr) => {
-        return mergesort(arr);
+        let helper = new Array(arr.length);
+        return mergesort(arr, helper, 0, arr.length - 1);
     };
 
     console.log(numbers);
-    let result = sort(numbers);
-    console.log(result);
+    sort(numbers);
+    console.log(numbers);
   </code>
 </pre>
 <h4 style="text-align-last: right;"> Performance: O(n log n), Space : O(n) </h4>
