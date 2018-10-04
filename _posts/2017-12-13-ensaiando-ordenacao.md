@@ -143,56 +143,7 @@ tags:
 </pre>
 <h4 style="text-align-last: right;"> Performance: O(n log n), Space : O(n) </h4>
 
-<h2 id="3-QuickSortFixedPivot">3 - Quick Sort Fixed Pivot</h2>
-
-<pre>
-  <code>
-    let numbers = [7,5,6,3,1,2,0,4];
-
-    let swap = (arr, i, j) => {
-        let tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    };
-
-    let partition = (arr, start, end) => {
-        let pivot = arr[end];
-        let reference = start;
-
-        for (let i = start; i < end; i++) {
-            if (arr[i] < pivot) {
-                swap(arr, i, reference);
-                reference++;
-            }
-        }
-
-        swap(arr, end, reference);
-
-        return reference;
-    };
-
-    let quicksort = (arr, start, end) => {
-        if (start < end) {
-            let pivotIndex = partition(arr, start, end);
-            quicksort(arr, start, pivotIndex - 1);
-            quicksort(arr, pivotIndex + 1, end);
-        }
-    };
-
-    let sort = (arr) => {
-        let start = 0;
-        let end   = arr.length - 1;
-        quicksort(arr, start, end);
-    };
-
-    console.log(numbers);
-    sort(numbers);
-    console.log(numbers);
-  </code>
-</pre>
-<h4 style="text-align-last: right;"> Performance: O(n<sup>2</sup>), Space : O(n) </h4>
-
-<h2 id="4-QuickSortMiddlePivot">4 - Quick Sort Middle Pivot</h2>
+<h2 id="3-QuickSortMiddlePivot">3 - Quick Sort Middle Pivot</h2>
 
 <pre>
   <code>
@@ -238,4 +189,4 @@ tags:
     console.log(numbers);
   </code>
 </pre>
-<h4 style="text-align-last: right;"> Performance: O(n<sup>2</sup>), Space : O(n) </h4>
+<h4 style="text-align-last: right;">Performance: O(n log n), Space : O(n) </h4>
